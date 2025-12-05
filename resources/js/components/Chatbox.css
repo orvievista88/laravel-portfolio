@@ -1,0 +1,19 @@
+.chatbox-desktop {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	background-color: #1e1e1e;
+	padding: 1rem;
+}
+
+.chatbox-mobile {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	height: calc(100vh - 56px); /* exclude header height */
+	background-color: #1e1e1e;
+	z-index: 1050;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+}

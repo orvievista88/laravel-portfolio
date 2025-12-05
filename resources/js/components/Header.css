@@ -1,0 +1,69 @@
+/* MOBILE MENU (already working) */
+.mobile-menu {
+	display: none;
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	background-color: #343a40;
+	z-index: 10;
+}
+.mobile-menu.open {
+	display: block;
+}
+.mobile-menu ul li {
+	padding: 10px 0;
+	border-bottom: 1px solid #555;
+}
+
+/* DESKTOP MENU HEADER */
+.main-header {
+	height: 40px;
+	line-height: 40px; /* vertical centering */
+}
+
+/* Desktop navbar styling */
+nav.d-md-flex {
+	height: 40px;
+	align-items: center;
+	display: flex !important;
+	background-color: #6c757d; /* Bootstrap secondary */
+	padding: 0;
+}
+
+/* Ensure UL stretches full height and aligns items */
+nav.d-md-flex ul.nav {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+/* Individual nav items */
+nav.d-md-flex .nav-item {
+	font-size: 0.9rem;
+	line-height: 1;
+	cursor: pointer;
+	padding: 0 1rem;
+	color: white;
+}
+
+/* Optional hover effect */
+nav.d-md-flex .nav-item:hover {
+	text-decoration: underline;
+}
+
+nav.d-md-flex {
+	height: 40px;
+	align-items: center;
+	display: none; /* Default: hidden on all screen sizes */
+  }
+  
+  @media (max-width: 768px) {
+	nav.d-md-flex {
+	  display: none !important; /* Show only on md and larger */
+	}
+  }
+
+  

@@ -1,0 +1,164 @@
+/* WelcomeMessage.css */
+
+/* Global reset for padding and margin */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	height: 100vh;
+	background-image: url('/background.jpg');
+	/* Set your background image */
+	background-size: cover;
+	background-attachment: fixed;
+	color: white!important;
+
+}
+
+/* Container holding both columns */
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 100vh;
+	padding: 20px;
+}
+
+/* 8-column part - scrollable */
+.col-8 {
+	flex: 8;
+	overflow-y: scroll;
+	height: 100vh;
+	/* Full height for scrolling */
+	padding-right: 20px;
+}
+
+/* 4-column part - fixed */
+.col-4 {
+	flex: 4;
+	position: fixed;
+	/* Fix on the right side */
+	top: 0;
+	right: 0;
+	height: 100vh;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.5);
+	/* Semi-transparent background */
+	box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Content inside the 8-column */
+.col-8 h1,
+.col-4 h2 {
+	margin-bottom: 20px;
+}
+
+.content {
+	margin-bottom: 100px;
+}
+
+/* Responsive layout: stack the columns on mobile */
+@media (max-width: 768px) {
+
+	.col-8,
+	.col-4 {
+		flex: 1 1 100%;
+		/* Full width on mobile */
+		position: relative;
+		/* Make it scrollable */
+		height: auto;
+		/* Allow auto height for smaller screens */
+	}
+}
+
+.chatbot-sidebar {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	color: black!important;
+}
+
+.chat-messages {
+	flex-grow: 1;
+	overflow-y: auto;
+	padding: 0.75rem;
+	border: 1px solid #ddd;
+	border-radius: 0.25rem;
+}
+
+
+.chatbot-header {
+	color: black;
+}
+
+header {
+	--bs-bg-opacity: 1;
+    background-color: rgb(32 24 42) !important;
+}
+
+footer {
+	margin-top: auto;
+}
+
+.chat-button-minimized {
+	margin-bottom: 65px;
+}
+
+.chat-with-bot-btn {
+	color: #fff;
+    background: grey
+}
+
+
+.main-content-wrapper {
+	width: 100%;
+}
+
+/* Override Bootstrap behavior for iPad Pro portrait (768px–1024px width) */
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+	.main-content-div {
+		width: 100% !important;
+		padding-left: 1rem !important;
+		padding-right: 1rem !important;
+		text-align: center;
+	}
+}
+
+/* Override hidden nav on iPads and smaller tablets */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+	nav.d-none.d-md-flex {
+	  display: flex !important;
+	  height: 40px;
+	}
+  
+	nav.d-none.d-md-flex ul.nav {
+	  justify-content: center;
+	  align-items: center;
+	  height: 100%;
+	}
+
+	.main-content-div {
+		padding-left: 20px;
+		padding-right: 20px;
+		text-align: center;
+	}
+	.work-experiences {
+		text-align: left!important;
+	}
+  }
+
+  .splide__arrow {
+	opacity: 0.1;
+	transition: opacity 0.3s ease;
+  }
+  
+  .splide__arrow:hover {
+	opacity: 1;
+  }
+
+  
+
+  
+  
