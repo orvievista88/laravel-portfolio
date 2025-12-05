@@ -485,7 +485,7 @@ function MainContent({ visibleSection }) {
 
 					<div className="row">
 						{/* Left Column - Contact Info & Resume */}
-						<div className="col-12 col-lg-5 offset-lg-1 mb-4">
+						<div className="col-12 col-lg-12 offset-lg-1 mb-4">
 							<h2>Contact</h2>
 							<p>
 								Send me a mail:{' '}
@@ -524,49 +524,6 @@ function MainContent({ visibleSection }) {
 							</div>
 						</div>
 
-						{/* Right Column - Contact Form */}
-						<div className="col-12 col-lg-5 mb-3">
-							{typeof window !== 'undefined' && window.flashSuccess && (
-								<div className="alert alert-success mt-3">{window.flashSuccess}</div>
-							)}
-
-							<h4>Leave me a message</h4>
-							<form method="POST" action="/contact-message">
-								<input
-									type="hidden"
-									name="_token"
-									value={
-										document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || ''
-									}
-								/>
-
-								<div className="form-group mt-3">
-									<label htmlFor="email">Your Email</label>
-									<input
-										type="email"
-										id="email"
-										name="email"
-										className="form-control"
-										required
-									/>
-								</div>
-
-								<div className="form-group mt-3">
-									<label htmlFor="message">Your Message</label>
-									<textarea
-										id="message"
-										name="message"
-										rows="4"
-										className="form-control"
-										required
-									></textarea>
-								</div>
-
-								<button type="submit" className="btn btn-success mt-3">
-									Send Message
-								</button>
-							</form>
-						</div>
 					</div>
 				</div>
 
